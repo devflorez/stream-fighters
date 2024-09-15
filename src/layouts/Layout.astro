@@ -1,0 +1,112 @@
+---
+interface Props {
+  title: string;
+}
+import "@fontsource/bebas-neue";
+import "@fontsource/oswald";
+import "@fontsource-variable/montserrat";
+const { title } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Únete a Stream Fighters 3, el evento de combates en vivo más esperado del año en La Macarena. Asegura tu boleto para el 20 de octubre de 2024 y vive la acción."
+    />
+    <meta
+      name="keywords"
+      content="Stream Fighters 3, evento de combates, La Macarena, octubre 2024, compra boletos, combates en vivo, Kick Westcol, UFC, deportes, boxeo"
+    />
+    <meta name="author" content="Stream Fighters 3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="No te pierdas el evento más épico de combates en vivo en La Macarena. Compra tu boleto para Stream Fighters 3."
+    />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:url" content="https://www.streamfighters.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="Vive la acción en Stream Fighters 3. Compra tu boleta para el evento en La Macarena, Octubre 2024."
+    />
+    <meta name="twitter:image" content="/android-chrome-512x512.png" />
+
+    <!-- Schema.org Event Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Stream Fighters 3",
+        "startDate": "2024-10-20T17:00:00-05:00",
+        "endDate": "2024-10-20T21:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "La Macarena",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 44 #48-28",
+            "addressLocality": "Medellín",
+            "addressRegion": "Antioquia",
+            "postalCode": "050015",
+            "addressCountry": "CO"
+          }
+        },
+        "image": ["/android-chrome-512x512.png"],
+        "description": "Únete a Stream Fighters 3, el evento de combates en vivo más esperado del año en La Macarena. Asegura tu boleto para el 20 de octubre de 2024 y vive la acción.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.taquillalive.com/performance-details/?artist=westcol&event=TCL.EVN542.PRF1",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2024-01-01T00:00"
+        },
+        "performer": {
+          "@type": "Person",
+          "name": "Westcol"
+        }
+      }
+    </script>
+
+    <!-- Title dinámico -->
+    <title>{title} - Stream Fighters 3 | Evento de Combates en Vivo</title>
+  </head>
+  <body>
+    <main
+      class="min-h-screen flex flex-col justify-center items-center relative"
+    >
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Oswald Variable", sans-serif;
+    background: #13151a;
+  }
+</style>

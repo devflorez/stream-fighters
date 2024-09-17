@@ -1,0 +1,72 @@
+---
+const peleas = [
+  {
+    titulo: "Invicto y Aspirante",
+    imagen: "/images/fighters/chanty-vs-gomez.webp",
+    peleador1: "Chanty",
+    peleador2: "El Gomez",
+  },
+  {
+    titulo: "Pelea de Bestias",
+    imagen: "/images/fighters/hercules-vs-big-mike.jpg",
+    peleador1: "Hercules",
+    peleador2: "Big Mike",
+  },
+  {
+    titulo: "Queen of the Ring",
+    imagen: "/images/fighters/alana-vs-mav.jpg",
+    peleador1: "Alana",
+    peleador2: "Mav",
+  },
+  {
+    titulo: "Retorno del Rey",
+    imagen: "/images/fighters/leandro-vs-mi-dios.webp",
+    peleador1: "Leandro",
+    peleador2: "Mi Dios Te Pague",
+  },
+  {
+    titulo: "Pelea del Género Urbano",
+    imagen: "/images/fighters/reboll-vs-kris.webp",
+    peleador1: "Reboll",
+    peleador2: "Kris R",
+  },
+  {
+    titulo: "Pelea Estelar",
+    imagen: "/images/fighters/jh-vs-camilo.webp",
+    peleador1: "JH",
+    peleador2: "Camilo",
+  },
+  
+];
+---
+
+<section
+  id="peleas"
+  class="py-12  w-full"
+>
+  <h2 class="text-center text-4xl font-bold text-white mb-2 font-bebas">
+    Peleas
+  </h2>
+  <p class="text-center text-xl text-gray-300 font-montserrat">
+    ¡No te pierdas las peleas más esperadas de la noche!
+  </p>
+  <div
+    class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+  >
+    {
+      peleas.map((pelea) => (
+        <div class="flex flex-col items-center text-center p-6">
+          <img
+            class="w-96 h-96 object-cover  mb-4"
+            src={pelea.imagen}
+            alt={`${pelea.peleador1} vs ${pelea.peleador2}`}
+          />
+          {/*    <h3 class="text-xl font-semibold text-white mb-2 font-bebas">
+          {pelea.peleador1} <span class="text-blue-500">vs</span> {pelea.peleador2}
+        </h3>
+        <p class="text-md text-gray-300 font-montserrat">{pelea.titulo}</p>*/}
+        </div>
+      ))
+    }
+  </div>
+</section>

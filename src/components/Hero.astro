@@ -3,11 +3,11 @@ import Countdown from "./Countdown.astro";
 ---
 
 <section
-  class="relative w-full h-screen overflow-hidden bg-cover bg-center bg-custom-gradient flex justify-center items-center"
+  class="relative w-full h-screen overflow-hidden lex justify-center items-center"
   style="background-image: url('/images/hero.webp'); background-size: cover; background-position: center;"
 >
   <div
-    class="absolute inset-0 bg-custom-gradient flex flex-col items-center justify-center p-4"
+    class="absolute inset-0 bg-[rgba(2,0,36,0.96)] flex flex-col items-center justify-center p-4"
   >
     <header class="mb-4">
       <img
@@ -25,62 +25,19 @@ import Countdown from "./Countdown.astro";
       <!-- Temporizador de cuenta regresiva -->
       <div class="flex flex-col items-center">
         <Countdown />
-        <p class="text-white text-sm md:text-lg font-montserrat text-center mt-2">
-          <strong>20</strong> de Octubre de <strong>2024</strong> - <strong
-            >17:00</strong
-          > UTC-5
-        </p>
+
+        <!-- Botón de compra de boletos -->
+        <footer class="mt-6 flex flex-col items-center">
+          <a
+            href="https://www.taquillalive.com/performance-details/?artist=westcol&event=TCL.EVN542.PRF1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold py-4 px-6 bg-[#1375e1] shadow-lg uppercase text-white transition-transform transform hover:scale-105 hover:bg-[#0d59b5] focus:outline-none focus:ring-2 focus:ring-[#1375e1] focus:ring-opacity-50"
+          >
+            ¡Compra tu boleta ahora!
+          </a>
+        </footer>
       </div>
-
-      <!-- Botón de compra de boletos -->
-      <footer class="mt-6 flex flex-col items-center">
-        <a
-          href="https://www.taquillalive.com/performance-details/?artist=westcol&event=TCL.EVN542.PRF1"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-bold py-4 px-6 bg-[#1375e1] shadow-lg uppercase text-white transition-transform transform hover:scale-105 hover:bg-[#0d59b5] focus:outline-none focus:ring-2 focus:ring-[#1375e1] focus:ring-opacity-50"
-        >
-          ¡Compra tu boleta ahora!
-        </a>
-        <span
-          class="text-white text-sm md:text-lg font-bebas text-center mt-2 uppercase"
-        >
-          kick.com/westcol
-        </span>
-      </footer>
     </main>
-  </div>
-
-  <!-- Información adicional en el pie -->
-  <div
-    class="flex items-center justify-center font-bebas text-white absolute self-center bottom-3 gap-2"
-  >
-    <span> Exclusivo en </span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="75"
-      height="25"
-      viewBox="0 0 933 300"
-      fill="none"
-    >
-      <g clip-path="url(#clip0_9790_492437)">
-        <g clip-path="url(#clip1_9790_492437)">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0 0H100V66.6667H133.333V33.3333H166.667V0H266.667V100H233.333V133.333H200V166.667H233.333V200H266.667V300H166.667V266.667H133.333V233.333H100V300H0V0ZM666.667 0H766.667V66.6667H800V33.3333H833.333V0H933.333V100H900V133.333H866.667V166.667H900V200H933.333V300H833.333V266.667H800V233.333H766.667V300H666.667V0ZM300 0H400V300H300V0ZM533.333 0H466.667V33.3333H433.333V266.667H466.667V300H533.333H633.333V200H533.333V100H633.333V0H533.333Z"
-            fill="#53FC18"
-          ></path>
-        </g>
-      </g>
-      <defs>
-        <clipPath id="clip0_9790_492437">
-          <rect width="933" height="300" fill="white"></rect>
-        </clipPath>
-        <clipPath id="clip1_9790_492437">
-          <rect width="933.333" height="300" fill="white"></rect>
-        </clipPath>
-      </defs>
-    </svg>
   </div>
 </section>

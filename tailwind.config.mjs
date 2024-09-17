@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+      
         "custom-gradient":
-          "radial-gradient(circle, rgba(2,0,36,0.90) 40%, rgba(19,117,225,0.60) 75%, rgba(0,212,255,0.40) 99%) ",
+          "linear-gradient(190deg, rgba(2,0,36,0.95) 60%, rgba(19,117,225,0.60) 75%, rgba(0,212,255,0.40) 99%) ",
       },
       fontFamily: {
         oswald: ["Oswald Variable", "sans-serif"],

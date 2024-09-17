@@ -1,0 +1,44 @@
+---
+const artistas = [
+  {
+    nombre: "Darell",
+    imagen: "/images/artists/darell.jpg",
+    descripcion:
+      "Darell es un artista de música urbana, conocido por su estilo único y colaboraciones con artistas de renombre en el género del reggaetón.",
+  },
+  {
+    nombre: "De La Ghetto",
+    imagen: "/images/artists/delaghetto.jpg",
+    descripcion:
+      "De La Ghetto es un cantante y compositor de reggaetón y música latina, reconocido por su influencia en la música urbana y su talento inigualable.",
+  },
+];
+---
+
+<section
+  id="artistas"
+  class="py-12  w-full"
+>
+  <h2 class="text-center text-4xl font-bold text-white mb-8 font-bebas">
+    Artistas Invitados
+  </h2>
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    {
+      artistas.map((artista) => (
+        <div class="artista flex flex-col items-center text-center p-6 rounded-lg shadow-lg">
+          <img
+            class="w-64 h-64 object-cover  mb-4"
+            src={artista.imagen}
+            alt={artista.nombre}
+          />
+          {/* <h3 class="text-xl font-semibold text-white mb-2 font-bebas">
+            {artista.nombre}
+          </h3>*/}
+          <p class="text-md text-gray-300 font-montserrat">
+            {artista.descripcion}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>
